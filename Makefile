@@ -9,32 +9,30 @@ LIB_LIBFT =	ft
 DIR_FTPRINTF = ./ft_printf/
 LIB_FTPRINTF = ftprintf
 
-OBJ =	${SRC:.c=.o}
+OBJ =		${SRC:.c=.o}
 
-all:			${NAME}
-
-${NAME_SRV}:	${OBJ}
-				${CC} ${CFLAGS} \
-				-L${DIR_FTPRINTF} -l${LIB_FTPRINTF} \
-				-L${DIR_LIBFT} -l${LIB_LIBFT} \
-				${OBJ_SRV} -o ${NAME_SRV}
+all:		${NAME}
 
 libs:
-				@${MAKE} -sC ${DIR_FTPRINTF}
-				@${MAKE} -sC ${DIR_LIBFT}
+			@${MAKE} -sC ${DIR_FTPRINTF}
+			@${MAKE} -sC ${DIR_LIBFT}
 
-${NAME}:		libs ${NAME}
+${NAME}:	${OBJ} libs
+			${CC} ${CFLAGS} \
+			-L${DIR_FTPRINTF} -l${LIB_FTPRINTF} \
+			-L${DIR_LIBFT} -l${LIB_LIBFT} \
+			${OBJ} -o ${NAME}
 
-norm:			all
-				norminette ${SRC} push_swap.h
+norm:		all
+			norminette ${SRC} push_swap.h
 clean:
-				rm -rf ${OBJ}
-				@${MAKE} -sC ${DIR_LIBFT} clean
-				@${MAKE} -sC ${DIR_FTPRINTF} clean
+			rm -rf ${OBJ}
+			@${MAKE} -sC ${DIR_LIBFT} clean
+			@${MAKE} -sC ${DIR_FTPRINTF} clean
 
-fclean:			clean
-				rm -rf ${NAME}
+fclean:		clean
+			rm -rf ${NAME}
 
-re:				fclean all
+re:			fclean all
 
-.PHONY:			all clean fclean
+.PHONY:		all clean fclean
