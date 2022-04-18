@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/18 19:56:29 by nchennaf         ###   ########.fr       */
+/*   Created: 2022/04/18 14:12:35 by nchennaf          #+#    #+#             */
+/*   Updated: 2022/04/18 15:12:20 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "./Libft/libft.h"
-# include "./ft_printf/ft_printf.h"
-
-# define ERROR "Error\n"
-# define ERR_ARG "Erreur d'arguments\n"
-
-typedef struct s_stack
+void	sa(t_push_swap stks)
 {
-	int		i;
-	int		nbr;
-	long	*v;
-}	t_stack;
+	int	tempura;
 
-typedef struct s_data
-{
-	t_stack	a;
-	t_stack	b;
-
-
-}	t_data;
-
-#endif
+	tempura = 0;
+	if (ft_strlen(stks.a.i) > 2)
+	{
+		tempura = stks.a.v[stks.a.i-1];
+		stks.a.v[stks.a.i-1] = stks.a.v[stks.a.i];
+		stks.a.v[stks.a.i] = tempura;
+	}
+}
