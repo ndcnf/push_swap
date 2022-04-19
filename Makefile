@@ -2,7 +2,9 @@ CC =		CC
 CFLAGS =	-Wall -Wextra -Werror #-g -fsanitize=address
 NAME =		push_swap
 AR =		ar rcs
-SRC =		push_swap.c
+SRC =		push_swap.c \
+			swap.c \
+			init.c
 
 DIR_LIBFT =	./libft/
 LIB_LIBFT =	ft
