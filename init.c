@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/20 19:13:55 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:44:22 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,18 @@ void	pop_stack_a(t_data *d, char *argv[])
 	if (argv[2] == NULL)
 	{
 		d->arg = 1;
-		ft_printf("d-arg [%d]\n", d->arg);
+		ft_printf("Une seule string ? arg = [%d]\n", d->arg);
+		one_string(d, argv);
 	}
-		ft_printf("a-arg2 [%d]\n", d->arg);
+	ft_printf("Alors, une seule ? arg = [%d]\n", d->arg);
 	if (d->arg == 0)
 	{
-		ft_printf("a-arg3 [%d]\n", d->arg);
+		//every_arg_counts();
+
+		ft_printf("arg = [%d]\n", d->arg);
 		while (argv[d->a->i])
 		{
-			ft_printf("a-arg4 [%d]\n", d->arg);
+			ft_printf("et la, l'arg est de... [%d]\n", d->arg);
 			d->a->v[d->a->i] = (long)(argv[d->a->i]);
 			d->a->nbr++;
 			d->a->i++;

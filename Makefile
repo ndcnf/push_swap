@@ -4,7 +4,9 @@ NAME =		push_swap
 AR =		ar rcs
 SRC =		push_swap.c \
 			swap.c \
-			init.c
+			init.c \
+			errors.c \
+			inputs.c
 
 DIR_LIBFT =	./libft/
 LIB_LIBFT =	ft

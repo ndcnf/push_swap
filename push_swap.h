@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/19 14:28:10 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:44:50 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,35 @@ typedef struct s_data
 	int		arg;
 }	t_data;
 
+// error.c
 void	errorminator(char *s);
+
+// init.c
 void	the_allocator(t_data *d);
 void	init_stacks(t_data *d);
 void	pop_stack_a(t_data *d, char *argv[]);
+
+// inputs.c
+void	one_string(t_data *d, char *argv[]);
+void	every_arg_counts(t_data *d, int argc, char *argv[]);
+
+// swap.c
 void	sa(t_data *d);
+//void	sb(t_data *d);
+//void	ss(t_data *d);
+
+// push.c
+//void	pa(t_data *d);
+//void	pb(t_data *d);
+
+//rotate.c
+//void	ra(t_data *d);
+//void	rb(t_data *d);
+//void	rr(t_data *d);
+
+//reverse_rotate.c
+//void	rra(t_data *d);
+//void	rrb(t_data *d);
+//void	rrr(t_data *d);
 
 #endif
