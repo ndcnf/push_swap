@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/26 14:17:28 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:06:31 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	main(int argc, char *argv[])
 	ft_printf("coucou\n");
 	ft_printf("argv1 [%s]\n", argv[1]);
 	ft_printf("argv2 [%s]\n", argv[2]);
-	ft_printf("[%s][%s][%d]", argv[0], argv[1], argv[2]);
+	ft_printf("[%s][%s]", argv[0], argv[1]);
 	return (EXIT_SUCCESS);
 }
