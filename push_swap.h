@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/28 14:39:15 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/28 16:34:57 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	no_doppelganger(char *s);
 // init.c
 void	the_allocator(t_data *d);
 void	init_stacks(t_data *d);
-void	pop_stack_a(t_data *d, char *argv[]);
+void	pop_stack_a(t_data *d, int argc, char *argv[]);
 
 // inputs.c
 void	one_string(t_data *d, char *argv[]);

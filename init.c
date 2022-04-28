@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/28 10:33:21 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/28 17:26:39 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	init_stacks(t_data *d)
 	d->arg = 0;
 }
 
-void	pop_stack_a(t_data *d, char *argv[])
+void	pop_stack_a(t_data *d, int argc, char *argv[])
 {
 	if (argv[2] == NULL)
 	{
@@ -39,18 +39,11 @@ void	pop_stack_a(t_data *d, char *argv[])
 		ft_printf("Une seule string ? type arg : %d\n", d->arg);
 		one_string(d, argv);
 	}
-	ft_printf("Alors, une seule ? type arg : %d\n", d->arg);
+	ft_printf("type arg : %d\n", d->arg);
 	if (d->arg == 0)
 	{
-		//every_arg_counts();
-
-/* 		ft_printf("arg = [%d]\n", d->arg);
-		while (argv[d->a->i])
-		{
-			ft_printf("et la, l'arg est de... [%d]\n", d->arg);
-			d->a->v[d->a->i] = (long)(argv[d->a->i])[i];
-			d->a->nbr++;
-			d->a->i++;
-		} */
+		ft_printf("une reservation pour plusieurs donc.\n");
+		every_arg_counts(d, argc, argv);
+		ft_printf("tu segfaultes apres ?\n");
 	}
 }
