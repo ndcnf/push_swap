@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/27 15:12:24 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/28 14:39:15 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # define ERROR "Error\n"
 # define ERR_ARG "Erreur d'arguments\n"
 # define ERR_MLC "Erreur d'attribution de la memoire\n"
+# define ERR_INT "Seuls les nombres entiers sont acceptes\n"
+# define ERR_SZE "Ces nombres ne sont pas geres par le programme\n"
 # define MIN_INT -2147483648
 # define MAX_INT 2147483647
 
@@ -48,6 +50,8 @@ typedef struct s_data
 
 // error.c
 void	errorminator(char *s);
+void	only_int(t_data *d, char *argv[]);
+void	no_doppelganger(char *s);
 
 // init.c
 void	the_allocator(t_data *d);
@@ -57,6 +61,9 @@ void	pop_stack_a(t_data *d, char *argv[]);
 // inputs.c
 void	one_string(t_data *d, char *argv[]);
 void	every_arg_counts(t_data *d, int argc, char *argv[]);
+
+//push_swap.c
+long	ft_atol(const char *str);
 
 // swap.c
 void	sa(t_data *d);
