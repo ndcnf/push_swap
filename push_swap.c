@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 18:35:55 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 22:05:34 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return(EXIT_SUCCESS);
 	pop_stack_a(&d, argc, argv);
-	ft_printf("avant doppel\n");
 	no_doppelganger(&d);
-	ft_printf("apres doppel\n");
 	return (EXIT_SUCCESS);
 }

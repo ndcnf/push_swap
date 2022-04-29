@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 14:45:33 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 22:04:21 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,9 @@ void	pop_stack_a(t_data *d, int argc, char *argv[])
 	if (argv[2] == NULL)
 	{
 		d->arg = 1;
-		ft_printf("Une seule string, ok.\n");
-		one_string(d, argv);
 		only_int(d, argv);
+		one_string(d, argv);
 	}
 	if (d->arg == 0)
-	{
-		ft_printf("Une reservation pour plusieurs donc.\n");
 		every_arg_counts(d, argc, argv);
-	}
 }
