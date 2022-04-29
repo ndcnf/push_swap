@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/28 15:49:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:47:03 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	only_int(t_data *d, char *argv[])
 			errorminator(ERR_SZE);
 		if (ft_atol((char *)d->a->v[i]) < MIN_INT)
 			errorminator(ERR_SZE);
-		ft_printf("%d\n", ft_atol((char *)d->a->v[i]));
 		i++;
 	}
 }

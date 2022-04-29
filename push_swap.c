@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/28 17:26:47 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:51:12 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,5 @@ int	main(int argc, char *argv[])
 		errorminator(ERR_ARG);
 	}
 	pop_stack_a(&d, argc, argv);
-	only_int(&d, argv);
-	ft_printf("argv1 [%s]\n", argv[1]);
-	ft_printf("argv2 [%s]\n", argv[2]);
-	ft_printf("[%s][%s]", argv[0], argv[1]);
 	return (EXIT_SUCCESS);
 }
