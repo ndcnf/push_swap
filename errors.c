@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 14:47:03 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 18:41:39 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,26 @@ void	only_int(t_data *d, char *argv[])
 	}
 }
 
-/* void	no_doppelganger(char *s)
+ void	no_doppelganger(t_data *d)
 {
-
-} */
+	int	i;
+//	int	dpplgngr;
+	i = 0;
+	d->a->i = 1;
+	while (i < d->a->nbr)
+	{
+		d->a->i = i + 1;
+		ft_printf("entre dans la boucle... [%d]\n", d->a->i);
+		while (d->a->i < d->a->nbr)
+		{
+			ft_printf("entre dans la seconde boucle... i[%d](%d) [dai][%d](%d)\n", i, d->a->v[i], d->a->i, d->a->v[d->a->i]);
+			if (d->a->v[d->a->i] == d->a->v[i])
+			{
+				ft_printf("entre dans la condition finale... davi[i][%d] dav[dai][%d]\n", d->a->v[i], d->a->v[d->a->i]);
+				errorminator(ERR_DPL);
+			}
+			d->a->i++;
+		}
+		i++;
+	}
+}

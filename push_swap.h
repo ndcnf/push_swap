@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/28 16:34:57 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/04/29 15:54:40 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define ERR_MLC "Erreur d'attribution de la memoire\n"
 # define ERR_INT "Seuls les nombres entiers sont acceptes\n"
 # define ERR_SZE "Ces nombres ne sont pas geres par le programme\n"
+# define ERR_DPL "Il y a des doublons dans les nombres entres\n"
 # define MIN_INT -2147483648
 # define MAX_INT 2147483647
 
@@ -51,7 +52,7 @@ typedef struct s_data
 // error.c
 void	errorminator(char *s);
 void	only_int(t_data *d, char *argv[]);
-void	no_doppelganger(char *s);
+void	no_doppelganger(t_data *d);
 
 // init.c
 void	the_allocator(t_data *d);
