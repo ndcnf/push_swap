@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 22:05:34 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/02 16:58:42 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,15 @@ int	main(int argc, char *argv[])
 		return(EXIT_SUCCESS);
 	pop_stack_a(&d, argc, argv);
 	no_doppelganger(&d);
+
+	// POUR VERIFIER L'ORDRE DES VALEURS
+	if (d.a->nbr > 1)
+		pb(&d);
+		//sa(&d);
+	d.a->i = 0;
+	while (d.a->i < d.a->nbr)
+		ft_printf("%d ", d.a->v[d.a->i++]);
+	// FIN DE VERIF
+	
 	return (EXIT_SUCCESS);
 }

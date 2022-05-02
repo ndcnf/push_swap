@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 21:35:30 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/02 16:46:10 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ long	ft_atol(const char *str);
 
 // swap.c
 void	sa(t_data *d);
-//void	sb(t_data *d);
-//void	ss(t_data *d);
+void	sb(t_data *d);
+void	ss(t_data *d);
 
 // push.c
-//void	pa(t_data *d);
-//void	pb(t_data *d);
+void	pa(t_data *d);
+void	pb(t_data *d);
 
 //rotate.c
 //void	ra(t_data *d);

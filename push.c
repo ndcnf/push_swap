@@ -1,54 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/18 14:12:35 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/02 15:33:40 by nchennaf         ###   ########.fr       */
+/*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
+/*   Updated: 2022/05/02 17:06:59 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_data *d)
+void	pa(t_data *d)
 {
 	int	tempura;
 
 	tempura = 0;
-	if (d->a->nbr > 1)
+	d->b->i = 0;
+	if (!d->b->v[d->b->i])
 	{
-		tempura = (int)d->a->v[0];
-		d->a->v[0] = d->a->v[1];
-		d->a->v[1] = tempura;
-		//free(tempura);
-		printf("sa\n");
-		//return ("sa");
+		tempura = d->a->v[0];
+		d->a->v[0] = d->b->v[0];
+		d->b->v[0] = tempura;
 	}
-	//return (ft_strdup(""));
+	ft_printf("b is feeling empty, doesn't want to go anywhere\n");
 }
 
-void	sb(t_data *d)
+void	pb(t_data *d)
 {
 	int	tempura;
 
 	tempura = 0;
-	if (d->b->nbr > 1)
+	d->a->i = 0;
+	ft_printf("pb %d\n", d->a->v[d->a->i]); //attention ici b et non 'a' de verifie
+	if (!d->a->v[d->a->i])
 	{
-		tempura = (int)d->b->v[0];
-		d->b->v[0] = d->b->v[1];
-		d->b->v[1] = tempura;
-		//free(tempura)
-		printf("sb\n");
-		//return ("sb");
+		tempura = d->b->v[0];
+		d->b->v[0] = d->a->v[0];
+		d->a->v[0] = tempura;
 	}
-	//return (ft_strdup(""));
-}
-
-void	ss(t_data *d)
-{
-	sa(d);
-	sb(d);
-	printf("ss\n");
+	ft_printf("a is feeling empty, doesn't want to go anywhere\n");
 }
