@@ -6,11 +6,25 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 16:24:40 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 17:24:16 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	check_moi_ca_stp(t_data *d)
+{
+	d->a->i = 0;
+	ft_printf("\n|-----[STACK A]-----|\n");
+	while (d->a->i < d->a->nbr)
+		ft_printf("[%d] %d\n", d->a->i, d->a->v[d->a->i++]);
+
+	d->b->i = 0;
+	ft_printf("\n|-----[STACK B]-----|\n");
+	while (d->b->i < d->b->nbr)
+		ft_printf("[%d] %d\n", d->b->i, d->b->v[d->b->i++]);
+}
+
 long	ft_atol(const char *str)
 {
 	int		i;
@@ -52,11 +66,17 @@ int	main(int argc, char *argv[])
 	// POUR VERIFIER L'ORDRE DES VALEURS
 	if (d.a->nbr > 1)
 	{
-		rra(&d);
+		pb(&d);
+		sa(&d);
+		pb(&d);
+		sb(&d);
+		pb(&d);
+		pa(&d);
+
+		//rra(&d);
 		//sa(&d);
-		//pb(&d);
 	}
-	d.a->i = 0;
+/* 	d.a->i = 0;
 	ft_printf("\n|-----[STACK A]-----|\n");
 	while (d.a->i < d.a->nbr)
 		ft_printf("[%d] %d\n", d.a->i, d.a->v[d.a->i++]);
@@ -64,7 +84,7 @@ int	main(int argc, char *argv[])
 	d.b->i = 0;
 	ft_printf("\n|-----[STACK B]-----|\n");
 	while (d.b->i < d.b->nbr)
-		ft_printf("[%d] %d\n", d.b->i, d.b->v[d.b->i++]);
+		ft_printf("[%d] %d\n", d.b->i, d.b->v[d.b->i++]); */
 	// FIN DE VERIF
 
 	return (EXIT_SUCCESS);
