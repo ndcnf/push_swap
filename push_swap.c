@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/02 18:25:06 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:00:19 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char *argv[])
 
 	// POUR VERIFIER L'ORDRE DES VALEURS
 	if (d.a->nbr > 1)
-		pb(&d);
+		pa(&d);
 		//sa(&d);
 	d.a->i = 0;
 	ft_printf("\n[STACK A]\n");
@@ -63,6 +63,6 @@ int	main(int argc, char *argv[])
 	while (d.b->i < d.b->nbr)
 		ft_printf("%d [ib %d]\n", d.b->v[d.b->i], d.b->i++);
 	// FIN DE VERIF
-	
+
 	return (EXIT_SUCCESS);
 }
