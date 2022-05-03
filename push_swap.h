@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 15:25:27 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 16:23:08 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ void	rb(t_data *d);
 void	rr(t_data *d);
 
 //reverse_rotate.c
-//void	rra(t_data *d);
-//void	rrb(t_data *d);
-//void	rrr(t_data *d);
+void	rra(t_data *d);
+void	rrb(t_data *d);
+void	rrr(t_data *d);
 
 #endif

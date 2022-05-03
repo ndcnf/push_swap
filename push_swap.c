@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 15:25:17 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 16:24:40 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int argc, char *argv[])
 	// POUR VERIFIER L'ORDRE DES VALEURS
 	if (d.a->nbr > 1)
 	{
-		ra(&d);
+		rra(&d);
 		//sa(&d);
 		//pb(&d);
 	}
