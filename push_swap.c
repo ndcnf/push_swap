@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 14:03:00 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:16:37 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,19 @@ int	main(int argc, char *argv[])
 
 	// POUR VERIFIER L'ORDRE DES VALEURS
 	if (d.a->nbr > 1)
-		pa(&d);
-		//sa(&d);
+	{
+		sa(&d);
+		pb(&d);
+	}
 	d.a->i = 0;
-	ft_printf("\n[STACK A]\n");
+	ft_printf("\n|-----[STACK A]-----|\n");
 	while (d.a->i < d.a->nbr)
-		ft_printf("%d [ia %d]\n", d.a->v[d.a->i], d.a->i++);
+		ft_printf("[%d] %d\n", d.a->i, d.a->v[d.a->i++]);
 
 	d.b->i = 0;
-	ft_printf("\n\n[STACK B]\n");
+	ft_printf("\n|-----[STACK B]-----|\n");
 	while (d.b->i < d.b->nbr)
-		ft_printf("%d [ib %d]\n", d.b->v[d.b->i], d.b->i++);
+		ft_printf("[%d] %d\n", d.b->i, d.b->v[d.b->i++]);
 	// FIN DE VERIF
 
 	return (EXIT_SUCCESS);
