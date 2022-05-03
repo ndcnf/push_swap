@@ -7,7 +7,8 @@ SRC =		push_swap.c \
 			init.c \
 			errors.c \
 			inputs.c \
-			push.c
+			push.c \
+			rotate.c
 
 DIR_LIBFT =	./libft/
 LIB_LIBFT =	ft
