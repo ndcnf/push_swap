@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 14:00:08 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:02:42 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	pa(t_data *d)
 		}
 		d->b->nbr--;
 	}
-	else
-		ft_printf("b is feeling empty, doesn't want to go anywhere\n");
 }
 
 void	pb(t_data *d)
@@ -56,6 +54,4 @@ void	pb(t_data *d)
 		}
 		d->a->nbr--;
 	}
-	else
-		ft_printf("a is feeling empty, doesn't want to go anywhere\n");
 }
