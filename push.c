@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 17:28:07 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:09:10 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	pa(t_data *d)
 		d->b->nbr--;
 		ft_printf("pa\n");
 	}
-	check_moi_ca_stp(d);
+	//check_moi_ca_stp(d);
 }
 
 void	pb(t_data *d)
@@ -57,5 +57,5 @@ void	pb(t_data *d)
 		d->a->nbr--;
 		ft_printf("pb\n");
 	}
-	check_moi_ca_stp(d);
+	//check_moi_ca_stp(d);
 }

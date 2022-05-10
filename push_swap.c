@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/03 17:24:16 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:08:26 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	main(int argc, char *argv[])
 	no_doppelganger(&d);
 
 	// POUR VERIFIER L'ORDRE DES VALEURS
-	if (d.a->nbr > 1)
+	/*if (d.a->nbr > 1)
 	{
 		pb(&d);
 		sa(&d);
@@ -75,7 +75,8 @@ int	main(int argc, char *argv[])
 
 		//rra(&d);
 		//sa(&d);
-	}
+	}*/
+
 /* 	d.a->i = 0;
 	ft_printf("\n|-----[STACK A]-----|\n");
 	while (d.a->i < d.a->nbr)
