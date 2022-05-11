@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 12:45:45 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:53:37 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	one_string(t_data *d, char *argv[])
 	d->b->v = ft_calloc(lenny, sizeof(long *));
 	while (d->a->i < lenny)
 	{
-		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || ft_atol(ft_split(argv[1], ' ')[d->a->i]) > MAX_INT)
+		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || \
+		ft_atol(ft_split(argv[1], ' ')[d->a->i]) > MAX_INT)
 			errorminator(ERR_SZE);
 		d->a->v[d->a->i] = ft_atoi(ft_split(argv[1], ' ')[d->a->i]);
 		d->a->i++;

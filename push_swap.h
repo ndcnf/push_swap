@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 10:47:36 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:54:30 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
 
-void	check_moi_ca_stp(t_data *d); //SUPPRIMER QUAND PLUS BESOIN DE VERIFIER LES OPERATIONS
+void	check_moi_ca_stp(t_data *d);
+//SUPPRIMER QUAND PLUS BESOIN DE VERIFIER LES OPERATIONS
 
 #endif

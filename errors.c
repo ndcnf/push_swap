@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/04/29 22:04:47 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:53:00 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	only_int(t_data *d, char *argv[])
 	int	i;
 
 	i = 0;
-
 	while (argv[1][i])
 	{
 		if (argv[1][i] < '0' || argv[1][i] > '9')
@@ -45,7 +44,7 @@ void	only_int(t_data *d, char *argv[])
 	}
 }
 
- void	no_doppelganger(t_data *d)
+void	no_doppelganger(t_data *d)
 {
 	int	i;
 

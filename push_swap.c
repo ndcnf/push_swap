@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 10:33:37 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:52:04 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	check_moi_ca_stp(t_data *d)
 	ft_printf("\n|-----[STACK A]-----|\n");
 	while (d->a->i < d->a->nbr)
 		ft_printf("[%d] %d\n", d->a->i, d->a->v[d->a->i++]);
-
 	d->b->i = 0;
 	ft_printf("\n|-----[STACK B]-----|\n");
 	while (d->b->i < d->b->nbr)
@@ -59,35 +58,9 @@ int	main(int argc, char *argv[])
 	the_allocator(&d);
 	init_stacks(&d);
 	if (argc < 2)
-		return(EXIT_SUCCESS);
+		return (EXIT_SUCCESS);
 	pop_stack_a(&d, argc, argv);
 	nbr_to_index(&d);
 	no_doppelganger(&d);
-
-	// POUR VERIFIER L'ORDRE DES VALEURS
-	/*if (d.a->nbr > 1)
-	{
-		pb(&d);
-		sa(&d);
-		pb(&d);
-		sb(&d);
-		pb(&d);
-		pa(&d);
-
-		//rra(&d);
-		//sa(&d);
-	}*/
-
-/* 	d.a->i = 0;
-	ft_printf("\n|-----[STACK A]-----|\n");
-	while (d.a->i < d.a->nbr)
-		ft_printf("[%d] %d\n", d.a->i, d.a->v[d.a->i++]);
-
-	d.b->i = 0;
-	ft_printf("\n|-----[STACK B]-----|\n");
-	while (d.b->i < d.b->nbr)
-		ft_printf("[%d] %d\n", d.b->i, d.b->v[d.b->i++]); */
-	// FIN DE VERIF
-
 	return (EXIT_SUCCESS);
 }
