@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/10 13:08:26 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 10:33:37 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return(EXIT_SUCCESS);
 	pop_stack_a(&d, argc, argv);
+	nbr_to_index(&d);
 	no_doppelganger(&d);
 
 	// POUR VERIFIER L'ORDRE DES VALEURS

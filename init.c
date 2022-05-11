@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/10 17:19:01 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 10:39:22 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ void	the_allocator(t_data *d)
 	d->b = malloc(sizeof(t_stack));
 	if (!d->b)
 		errorminator(ERR_MLC);
-	d->o = malloc(sizeof(t_index));
-	if (!d->o)
-		errorminator(ERR_MLC);
 }
 
 void	init_stacks(t_data *d)
@@ -32,8 +29,6 @@ void	init_stacks(t_data *d)
 	d->a->nbr = 0;
 	d->b->nbr = 0;
 	d->arg = 0;
-	d->o->i = 0;
-	d->o->j = 0;
 }
 
 void	pop_stack_a(t_data *d, int argc, char *argv[])

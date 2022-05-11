@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 10:30:03 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:45:45 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,39 +61,40 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 	}
 }
 
-void	the_swapper(t_data *d)
+void	the_swapper(t_data *d, int i, int j)
 {
 	int	tempura;
 
-	tempura = d->o->ord[d->o->i];
-	d->o->ord[d->o->i] = d->o->ord[d->o->j];
-	d->o->ord[d->o->j] = tempura;
+	tempura = d->ord[i];
+	d->ord[i] = d->ord[j];
+	d->ord[j] = tempura;
 }
 
 void	nbr_to_index(t_data *d)
 {
-	//int		i;
-	//int		j;
-	int		nbr;
-	//long	*order;
+	int	nbr;
+	int	i;
+	int	j;
 
-	//i = 0;
-	//j = 0;
+	i = 0;
+	j = 0;
 	nbr = d->a->nbr;
-	//d->a->i = 0;
-	d->o->ord = ft_calloc(d->a->nbr, sizeof(long *));
-	while (d->o->i < nbr)
-		d->o->ord[d->o->i] = d->a->v[d->o->i++];
-	d->o->i = 0;
-	while (d->o->i < nbr)
+	d->ord = ft_calloc(nbr, sizeof(long *));
+	while (i < nbr)
 	{
-		while (d->o->j < nbr)
+		d->ord[i] = d->a->v[i];
+		i++;
+	}
+	i = 0;
+	while (i < nbr)
+	{
+		while (j < nbr)
 		{
-			if (d->o->ord[d->o->i] > d->o->ord[d->o->j])
-				the_swapper(d);
-			d->o->j++;
+			if (d->ord[i] > d->ord[j])
+				the_swapper(d, i, j);
+			j++;
 		}
-		d->o->i++;
-		d->o->j = d->o->i + 1;
+		i++;
+		j = i + 1;
 	}
 }
