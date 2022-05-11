@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:02 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 09:38:44 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_index
 	int		i;
 	int		j;
 	long	*ord;
-}	t_index
+}	t_index;
 
 /********************************************************
 * 'arg' values are as follows:							*
