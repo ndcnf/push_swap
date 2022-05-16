@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/16 11:17:42 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:27:47 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,10 @@ void	radix(t_data *d)
 
 	i = 0;
 	max = d->a->nbr - 1;
-	ft_printf("[%d] dord0<<i : %d\n",d->ord[max], (d->ord[max]>>1)&1);
 	while ((d->ord[max]>>i) != 1)
-	{
-		ft_printf("radix [%d]\n", (d->ord[max]>>i));
 		i++;
-	}
-	ft_printf("i : %d", i);
+	max = i + 1;
+	ft_printf("max : %d\n", max);
 }
 
 void	the_bitshifter(t_data *d)
