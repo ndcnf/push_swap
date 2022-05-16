@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 16:43:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/12 14:13:34 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,18 @@ typedef struct s_data
 	long	*ord;
 }	t_data;
 
-// error.c
+//error.c
 void	errorminator(char *s);
 void	only_int(t_data *d, char *argv[]);
 void	no_doppelganger(t_data *d);
 void	already_sorted(t_data *d);
 
-// init.c
+//init.c
 void	the_allocator(t_data *d);
 void	init_stacks(t_data *d);
 void	pop_stack_a(t_data *d, int argc, char *argv[]);
 
-// inputs.c
+//inputs.c
 void	one_string(t_data *d, char *argv[]);
 void	every_arg_counts(t_data *d, int argc, char *argv[]);
 void	the_swapper(t_data *d, int i, int j);
@@ -70,12 +70,16 @@ void	nbr_to_index(t_data *d);
 //push_swap.c
 long	ft_atol(const char *str);
 
-// swap.c
+//algo.c
+void	radix(t_data *d);
+void	the_bitshifter(t_data *d);
+
+//swap.c
 void	sa(t_data *d);
 void	sb(t_data *d);
 void	ss(t_data *d);
 
-// push.c
+//push.c
 void	pa(t_data *d);
 void	pb(t_data *d);
 

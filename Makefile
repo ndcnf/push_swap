@@ -9,7 +9,8 @@ SRC =		push_swap.c \
 			inputs.c \
 			push.c \
 			rotate.c \
-			reverse_rotate.c
+			reverse_rotate.c \
+			algo.c
 
 DIR_LIBFT =	./libft/
 LIB_LIBFT =	ft
