@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/12 14:43:02 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:13:38 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,5 @@ int	main(int argc, char *argv[])
 	no_doppelganger(&d);
 	the_bitshifter(&d);
 	already_sorted(&d);
-
 	return (EXIT_SUCCESS);
 }
