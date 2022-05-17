@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/16 13:22:42 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:14:27 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	pop_stack_a(t_data *d, int argc, char *argv[]);
 void	one_string(t_data *d, char *argv[]);
 void	every_arg_counts(t_data *d, int argc, char *argv[]);
 void	the_swapper(t_data *d, int i, int j);
+void	the_sorter(t_data *d);
 void	nbr_to_index(t_data *d);
 
 //push_swap.c

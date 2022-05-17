@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/17 15:09:17 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:30:37 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,12 @@ void	the_swapper(t_data *d, int i, int j)
 {
 	int	tempura;
 
-	tempura = d->ord[i]; //ok
-	d->ord[i] = d->ord[j]; //ok
-	d->ord[j] = tempura; //ok
+	tempura = d->ord[i];
+	d->ord[i] = d->ord[j];
+	d->ord[j] = tempura;
 }
 
-void	nbr_to_index(t_data *d)
+void	the_sorter(t_data *d)
 {
 	int	nbr;
 	int	i;
@@ -99,10 +99,23 @@ void	nbr_to_index(t_data *d)
 		i++;
 		j = i + 1;
 	}
+
+	// POUR VERIFIER UNIQUEMENT
 	i = 0;
 	while (i < nbr)
 	{
 		ft_printf("verif [%d]\n", d->idx[i]);
 		i++;
 	}
+	///////////////////////////
+}
+
+void	nbr_to_index(t_data *d)
+{
+	int	i;
+
+	i = 0;
+	the_sorter(d);
+
+
 }
