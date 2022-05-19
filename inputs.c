@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/17 15:30:37 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 14:14:28 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,22 +100,37 @@ void	the_sorter(t_data *d)
 		j = i + 1;
 	}
 
-	// POUR VERIFIER UNIQUEMENT
-	i = 0;
-	while (i < nbr)
-	{
-		ft_printf("verif [%d]\n", d->idx[i]);
-		i++;
-	}
-	///////////////////////////
+
 }
 
 void	nbr_to_index(t_data *d)
 {
 	int	i;
+	int	j;
 
 	i = 0;
+	j = 0;
 	the_sorter(d);
 
+	ft_printf("%d\n", d->a->nbr);
+	while (i < d->a->nbr)
+	{
+		if (d->ord[i] == d->a->v[j])
+		{
+			d->idx[i] = j;
+			i++;
+			j = 0;
+		}
+		else
+			j++;
+	}
 
+	//POUR VERIFIER UNIQUEMENT//
+	i = 0;
+	while (i < d->a->nbr)
+	{
+		ft_printf("verif [%d]\n", d->idx[i]);
+		i++;
+	}
+	////////////////////////////
 }
