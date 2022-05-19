@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/19 14:20:19 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:49:47 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ void	the_sorter(t_data *d)
 	i = 0;
 	nbr = d->a->nbr;
 	d->ord = ft_calloc(nbr, sizeof(long *));
-	d->idx = ft_calloc(nbr, sizeof(long *));
 	while (i < nbr)
 	{
 		d->ord[i] = d->a->v[i];
@@ -99,36 +98,28 @@ void	the_sorter(t_data *d)
 		i++;
 		j = i + 1;
 	}
-
-
 }
 
 void	nbr_to_index(t_data *d)
 {
+	int	nbr;
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
+	nbr = d->a->nbr;
+	//d->a->idx = ft_calloc(nbr, sizeof(long *));
 	the_sorter(d);
 	while (i < d->a->nbr)
 	{
 		if (d->ord[i] == d->a->v[j])
 		{
-			d->idx[j] = i;
+			d->a->idx[j] = i;
 			i++;
 			j = 0;
 		}
 		else
 			j++;
 	}
-
-	//POUR VERIFIER UNIQUEMENT//
-	i = 0;
-	while (i < d->a->nbr)
-	{
-		ft_printf("verif [%d]\n", d->idx[i]);
-		i++;
-	}
-	////////////////////////////
 }

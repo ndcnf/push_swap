@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:25:52 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/10 13:09:47 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 17:51:22 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,17 @@ void	ra(t_data *d)
 	}
 	d->a->v[d->a->nbr - 1] = tempura;
 	ft_printf("ra\n");
-	//check_moi_ca_stp(d);
+
+/* 	d->a->i = 0;
+	tempura = d->a->v[0];
+	while (d->a->i < d->a->nbr)
+	{
+		d->a->v[d->a->i] = d->a->v[d->a->i + 1];
+		d->a->i++;
+	}
+	d->a->v[d->a->nbr - 1] = tempura;
+	ft_printf("ra\n"); */
+	check_moi_ca_stp(d);
 }
 
 void	rb(t_data *d)

@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/17 15:14:27 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:31:13 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_stack
 	int		i;
 	int		nbr;
 	long	*v;
+	long	*idx;
 }	t_stack;
 
 /********************************************************
@@ -48,7 +49,7 @@ typedef struct s_data
 	t_stack	*b;
 	int		arg;
 	long	*ord;
-	long	*idx;
+	//long	*idx;
 }	t_data;
 
 //error.c
