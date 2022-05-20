@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/19 18:31:47 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:11:29 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 void	radix(t_data *d)
 {
-	int	max;
+	check_moi_ca_stp(d);
+	ra(d);
+	check_moi_ca_stp(d);
+/* 	int	max;
 	int	i;
 
 	i = 0;
 	max = d->a->nbr - 1;
 	while ((max >> i) != 1)
 		i++;
-/* 	while ((d->idx[max] >> i) != 1)
-		i++; */
-	max = i + 1;
+	while ((d->idx[max] >> i) != 1)
+		i++;
+	//max = i + 1;
+	max = i;
 	i = 0;
 	// et la, hop, on va radixer au max
 	while (max)
@@ -31,10 +35,10 @@ void	radix(t_data *d)
 		if (((d->a->idx[i] >> i)&1) != 1)
 			pb(d);
 		else
-			rra(d);
+			ra(d);
 		i++;
 		max--;
-	}
+	} */
 }
 
 void	the_bitshifter(t_data *d)

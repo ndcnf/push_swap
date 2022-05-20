@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:25:52 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 08:44:58 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:11:04 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 void	ra(t_data *d)
 {
-	int	tempura;
+	int	tempura_v;
+	int	tempura_i;
 
 	d->a->i = 0;
-	tempura = d->a->idx[0];
-	while (d->a->i < d->a->nbr)
+	tempura_i = d->a->idx[0];
+	tempura_v = d->a->v[0];
+	while (d->a->i < d->a->nbr - 1)
 	{
 		d->a->idx[d->a->i] = d->a->idx[d->a->i + 1];
+		d->a->v[d->a->i] = d->a->v[d->a->i + 1];
 		d->a->i++;
 	}
-	d->a->idx[d->a->nbr - 1] = tempura;
+	d->a->idx[d->a->nbr - 1] = tempura_i;
+	d->a->v[d->a->nbr - 1] = tempura_v;
 	ft_printf("ra\n");
 
 /* 	d->a->i = 0;
@@ -35,7 +39,7 @@ void	ra(t_data *d)
 	}
 	d->a->v[d->a->nbr - 1] = tempura;
 	ft_printf("ra\n"); */
-	check_moi_ca_stp(d);
+	//check_moi_ca_stp(d);
 }
 
 void	rb(t_data *d)
