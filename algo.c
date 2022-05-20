@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:11:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:22:58 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	radix(t_data *d)
 {
 	check_moi_ca_stp(d);
-	ra(d);
+	pb(d);
+	pb(d);
+	pb(d);
 	check_moi_ca_stp(d);
 /* 	int	max;
 	int	i;

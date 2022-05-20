@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/19 18:44:55 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:23:48 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	pa(t_data *d)
 		d->b->nbr--;
 		ft_printf("pa\n");
 	}
-	//check_moi_ca_stp(d);
 }
 
 void	pb(t_data *d)
@@ -45,37 +44,19 @@ void	pb(t_data *d)
 		while (d->b->i > 0)
 		{
 			d->b->idx[d->b->i] = d->b->idx[d->b->i - 1];
+			d->b->v[d->b->i] = d->b->v[d->b->i - 1];
 			d->b->i--;
 		}
 		d->b->idx[0] = d->a->idx[0];
+		d->b->v[0] = d->a->v[0];
 		d->b->nbr++;
-		while (d->a->i < d->a->nbr)
+		while (d->a->i < d->a->nbr - 1)
 		{
 			d->a->idx[d->a->i] = d->a->idx[d->a->i + 1];
+			d->a->v[d->a->i] = d->a->v[d->a->i + 1];	
 			d->a->i++;
 		}
 		d->a->nbr--;
 		ft_printf("pb\n");
 	}
-
-/* 	d->a->i = 0;
-	d->b->i = d->b->nbr;
-	if (d->a->nbr > 0)
-	{
-		while (d->b->i > 0)
-		{
-			d->b->v[d->b->i] = d->b->v[d->b->i - 1];
-			d->b->i--;
-		}
-		d->b->v[0] = d->a->v[0];
-		d->b->nbr++;
-		while (d->a->i < d->a->nbr)
-		{
-			d->a->v[d->a->i] = d->a->v[d->a->i + 1];
-			d->a->i++;
-		}
-		d->a->nbr--;
-		ft_printf("pb\n");
-	} */
-	check_moi_ca_stp(d);
 }
