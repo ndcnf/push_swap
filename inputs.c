@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 08:38:13 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:24:03 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ void	one_string(t_data *d, char *argv[])
 
 void	every_arg_counts(t_data *d, int argc, char *argv[])
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
+	size_t	z;
 
 	i = 1;
 	j = 0;
@@ -60,6 +61,16 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 	{
 		if (ft_atol(argv[i]) < MIN_INT || ft_atol(argv[i]) > MAX_INT)
 			errorminator(ERR_SZE);
+		z = 0;
+		while (z < ft_strlen(argv[i]))
+		{
+			if ((argv[i][z] != '+' || argv[i][z] != '-') && (!ft_isdigit(argv[i][z + 1])))
+			{
+				if (!ft_isdigit(argv[i][z]))
+					errorminator(ERR_INT);
+			}
+			z++;
+		}
 		d->a->v[d->a->i] = ft_atoi(argv[i]);
 		i++;
 		d->a->i++;

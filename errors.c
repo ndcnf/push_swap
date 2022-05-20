@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 10:48:56 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:26:04 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,33 @@ void	errorminator(char *s)
 void	only_int(t_data *d, char *argv[])
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (argv[1][i])
+	j = 1;
+
+	while (argv[j][i])
+	{
+		if (argv[j][i] < '0' || argv[j][i] > '9')
+		{
+			if (argv[j][i] != ' ' && argv[j][i] != '-' && argv[j][i] != '+')
+				errorminator(ERR_INT);
+			if (d->arg == 0)
+				j++;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < d->a->nbr)
+	{
+		if (ft_atol((char *)d->a->v[i]) > MAX_INT)
+			errorminator(ERR_SZE);
+		if (ft_atol((char *)d->a->v[i]) < MIN_INT)
+			errorminator(ERR_SZE);
+		i++;
+	}
+
+/* 	while (argv[1][i])
 	{
 		if (argv[1][i] < '0' || argv[1][i] > '9')
 		{
@@ -41,7 +65,7 @@ void	only_int(t_data *d, char *argv[])
 		if (ft_atol((char *)d->a->v[i]) < MIN_INT)
 			errorminator(ERR_SZE);
 		i++;
-	}
+	} */
 }
 
 void	no_doppelganger(t_data *d)
