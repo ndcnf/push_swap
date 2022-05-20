@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 14:24:03 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:58:12 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	one_string(t_data *d, char *argv[])
 
 	i = 0;
 	d->a->i = 0;
-	lenny = ft_strlen(argv[1]);
-	while (i <= lenny)
+	lenny = d->a->nbr;
+	/*while (i <= lenny)
 	{
 		if (argv[1][i] == ' ')
 			d->a->nbr++;
@@ -31,7 +31,8 @@ void	one_string(t_data *d, char *argv[])
 	d->a->v = ft_calloc(lenny, sizeof(long *));
 	d->b->v = ft_calloc(lenny, sizeof(long *));
 	d->a->idx = ft_calloc(lenny, sizeof(long *));
-	d->b->idx = ft_calloc(lenny, sizeof(long *));
+	d->b->idx = ft_calloc(lenny, sizeof(long *)); */
+
 	while (d->a->i < lenny)
 	{
 		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || \
@@ -42,7 +43,7 @@ void	one_string(t_data *d, char *argv[])
 	}
 }
 
-void	every_arg_counts(t_data *d, int argc, char *argv[])
+void	every_arg_counts(t_data *d, char *argv[])
 {
 	int		i;
 	int		j;
@@ -50,13 +51,13 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 
 	i = 1;
 	j = 0;
-	d->a->nbr = argc - 1;
+/* 	d->a->nbr = argc - 1;
 	d->arg = 0;
 	d->a->i = 0;
 	d->a->v = ft_calloc(d->a->nbr, sizeof(long *));
 	d->b->v = ft_calloc(d->a->nbr, sizeof(long *));
 	d->a->idx = ft_calloc(d->a->nbr, sizeof(long *));
-	d->b->idx = ft_calloc(d->a->nbr, sizeof(long *));
+	d->b->idx = ft_calloc(d->a->nbr, sizeof(long *)); */
 	while (i <= d->a->nbr)
 	{
 		if (ft_atol(argv[i]) < MIN_INT || ft_atol(argv[i]) > MAX_INT)
@@ -124,7 +125,6 @@ void	nbr_to_index(t_data *d)
 	i = 0;
 	j = 0;
 	nbr = d->a->nbr;
-	//d->a->idx = ft_calloc(nbr, sizeof(long *));
 	the_sorter(d);
 	while (i < d->a->nbr)
 	{

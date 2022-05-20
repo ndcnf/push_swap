@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 11:20:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:59:05 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,38 @@ void	init_stacks(t_data *d)
 	d->arg = 0;
 }
 
-void	pop_stack_a(t_data *d, int argc, char *argv[])
+void	count_on_me(t_data *d, int argc, char *argv[])
+{
+	int	i;
+	int	lenny;
+
+	i = 0;
+	d->a->i = 0;
+	if (d->arg == 1)
+	{
+		lenny = ft_strlen(argv[1]);
+		while (i <= lenny)
+		{
+			if (argv[1][i] == ' ')
+				d->a->nbr++;
+			i++;
+		}
+		d->a->nbr++;
+	}
+	else
+	{
+		lenny = argc - 1;
+		ft_printf("lennou %d\n", lenny);
+	}
+	lenny = d->a->nbr;
+	ft_printf("LENNY %d\n", lenny);
+	d->a->v = ft_calloc(lenny, sizeof(long *));
+	d->b->v = ft_calloc(lenny, sizeof(long *));
+	d->a->idx = ft_calloc(lenny, sizeof(long *));
+	d->b->idx = ft_calloc(lenny, sizeof(long *));
+}
+
+void	pop_stack_a(t_data *d, char *argv[])
 {
 	if (argv[2] == NULL)
 	{
@@ -42,6 +73,6 @@ void	pop_stack_a(t_data *d, int argc, char *argv[])
 	if (d->arg == 0)
 	{
 		only_int(d, argv);
-		every_arg_counts(d, argc, argv);
+		every_arg_counts(d, argv);
 	}
 }
