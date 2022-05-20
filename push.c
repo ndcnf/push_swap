@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:23:48 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:25:59 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,16 @@ void	pa(t_data *d)
 	{
 		while (d->a->i > 0)
 		{
+			d->a->idx[d->a->i] = d->a->idx[d->a->i - 1];	
 			d->a->v[d->a->i] = d->a->v[d->a->i - 1];
 			d->a->i--;
 		}
+		d->a->idx[0] = d->b->idx[0];
 		d->a->v[0] = d->b->v[0];
 		d->a->nbr++;
-		while (d->b->i < d->b->nbr)
+		while (d->b->i < d->b->nbr - 1)
 		{
+			d->b->idx[d->b->i] = d->b->idx[d->b->i + 1];	
 			d->b->v[d->b->i] = d->b->v[d->b->i + 1];
 			d->b->i++;
 		}
