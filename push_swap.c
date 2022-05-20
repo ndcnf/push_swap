@@ -6,7 +6,11 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/20 14:59:43 by nchennaf         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/20 10:24:49 by nchennaf         ###   ########.fr       */
+>>>>>>> parent of f03e17c (integers mngt fixed)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +71,6 @@ int	main(int argc, char *argv[])
 	nbr_to_index(&d);
 	no_doppelganger(&d);
 	already_sorted(&d);
-	radix(&d);
+	the_bitshifter(&d);
 	return (EXIT_SUCCESS);
 }

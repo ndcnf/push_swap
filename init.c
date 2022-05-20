@@ -6,7 +6,11 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/20 14:59:05 by nchennaf         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/11 10:39:22 by nchennaf         ###   ########.fr       */
+>>>>>>> parent of f03e17c (integers mngt fixed)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +75,12 @@ void	pop_stack_a(t_data *d, char *argv[])
 		one_string(d, argv);
 	}
 	if (d->arg == 0)
+<<<<<<< HEAD
 	{
 		only_int(d, argv);
 		every_arg_counts(d, argv);
 	}
+=======
+		every_arg_counts(d, argc, argv);
+>>>>>>> parent of f03e17c (integers mngt fixed)
 }
