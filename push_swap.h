@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:58:41 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 10:25:07 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef struct s_data
 void	errorminator(char *s);
 void	only_int(t_data *d, char *argv[]);
 void	no_doppelganger(t_data *d);
-int		already_sorted(t_data *d);
+void	already_sorted(t_data *d);
 
 //init.c
 void	the_allocator(t_data *d);
