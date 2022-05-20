@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/19 18:49:47 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 08:38:13 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	one_string(t_data *d, char *argv[])
 	lenny = d->a->nbr;
 	d->a->v = ft_calloc(lenny, sizeof(long *));
 	d->b->v = ft_calloc(lenny, sizeof(long *));
+	d->a->idx = ft_calloc(lenny, sizeof(long *));
+	d->b->idx = ft_calloc(lenny, sizeof(long *));
 	while (d->a->i < lenny)
 	{
 		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || \
@@ -52,6 +54,8 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 	d->a->i = 0;
 	d->a->v = ft_calloc(d->a->nbr, sizeof(long *));
 	d->b->v = ft_calloc(d->a->nbr, sizeof(long *));
+	d->a->idx = ft_calloc(d->a->nbr, sizeof(long *));
+	d->b->idx = ft_calloc(d->a->nbr, sizeof(long *));
 	while (i <= d->a->nbr)
 	{
 		if (ft_atol(argv[i]) < MIN_INT || ft_atol(argv[i]) > MAX_INT)
