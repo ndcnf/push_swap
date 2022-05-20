@@ -6,19 +6,43 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:26:09 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:58:45 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int		get_max(t_data *d)
+{
+	int	max;
+	int	i;
+
+	i = 0;
+	max = d->a->nbr - 1;
+	while ((max >> i) != 1)
+		i++;
+	while (max >> i)
+		i++;
+	max = i;
+	return (max);
+}
+
 void	radix(t_data *d)
 {
-	check_moi_ca_stp(d);
-	pb(d);
-	pb(d);
-	pa(d);
-	check_moi_ca_stp(d);
+	int	i;
+	int	max;
+
+	max = get_max(d);
+	i = 0;
+	ft_printf("MAX %d\n", get_max(d));
+	while (already_sorted(d) && i < max)
+	{
+		while ()
+	}
+
+
+
+
 /* 	int	max;
 	int	i;
 

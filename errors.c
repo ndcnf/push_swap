@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/11 16:48:06 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:58:09 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	no_doppelganger(t_data *d)
 	}
 }
 
-void	already_sorted(t_data *d)
+int	already_sorted(t_data *d)
 {
 	int	i;
 
@@ -71,5 +71,6 @@ void	already_sorted(t_data *d)
 	while ((d->a->v[i] == d->ord[i]) && i < d->a->nbr)
 		i++;
 	if (i == d->arg)
-		exit (EXIT_SUCCESS);
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }
