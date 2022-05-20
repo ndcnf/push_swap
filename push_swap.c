@@ -6,26 +6,11 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 11:17:10 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:04:43 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	check_moi_ca_stp(t_data *d)
-{
-	d->a->i = 0;
-
-	ft_printf("\n|-----[STACK A]-----|\n");
-	while (d->a->i < d->a->nbr)
-		ft_printf("[%d] v{%d} idx{%d}\n", d->a->i, d->a->v[d->a->i], d->a->idx[d->a->i++]);
-	
-	d->b->i = 0;
-
-	ft_printf("\n|-----[STACK B]-----|\n");
-	while (d->b->i < d->b->nbr)
-		ft_printf("[%d] v{%d} idx{%d}\n", d->b->i, d->b->v[d->b->i], d->b->idx[d->b->i++]);
-}
 
 long	ft_atol(const char *str)
 {

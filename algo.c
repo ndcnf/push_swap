@@ -6,13 +6,13 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 11:16:13 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:06:40 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		get_max(t_data *d)
+int	get_max(t_data *d)
 {
 	int	max;
 	int	i;
@@ -40,7 +40,7 @@ void	radix(t_data *d)
 		j = d->a->nbr;
 		while (j > 0)
 		{
-			if ((d->a->idx[0] >> i)&1)
+			if ((d->a->idx[0] >> i) & 1)
 				ra(d);
 			else
 				pb(d);

@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 18:09:04 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 11:20:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 15:40:00 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,17 @@ void	the_allocator(t_data *d)
 	d->b = malloc(sizeof(t_stack));
 	if (!d->b)
 		errorminator(ERR_MLC);
+}
+
+void	count_on_me(t_data *d)
+{
+	int	lenny;
+
+	lenny = d->a->nbr;
+	d->a->v = ft_calloc(lenny, sizeof(long *));
+	d->b->v = ft_calloc(lenny, sizeof(long *));
+	d->a->idx = ft_calloc(lenny, sizeof(long *));
+	d->b->idx = ft_calloc(lenny, sizeof(long *));
 }
 
 void	init_stacks(t_data *d)

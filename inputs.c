@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 14:24:03 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:03:29 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ void	one_string(t_data *d, char *argv[])
 	}
 	d->a->nbr++;
 	lenny = d->a->nbr;
-	d->a->v = ft_calloc(lenny, sizeof(long *));
-	d->b->v = ft_calloc(lenny, sizeof(long *));
-	d->a->idx = ft_calloc(lenny, sizeof(long *));
-	d->b->idx = ft_calloc(lenny, sizeof(long *));
+	count_on_me(d);
 	while (d->a->i < lenny)
 	{
 		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || \
@@ -51,12 +48,7 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 	i = 1;
 	j = 0;
 	d->a->nbr = argc - 1;
-	d->arg = 0;
-	d->a->i = 0;
-	d->a->v = ft_calloc(d->a->nbr, sizeof(long *));
-	d->b->v = ft_calloc(d->a->nbr, sizeof(long *));
-	d->a->idx = ft_calloc(d->a->nbr, sizeof(long *));
-	d->b->idx = ft_calloc(d->a->nbr, sizeof(long *));
+	count_on_me(d);
 	while (i <= d->a->nbr)
 	{
 		if (ft_atol(argv[i]) < MIN_INT || ft_atol(argv[i]) > MAX_INT)
@@ -64,16 +56,15 @@ void	every_arg_counts(t_data *d, int argc, char *argv[])
 		z = 0;
 		while (z < ft_strlen(argv[i]))
 		{
-			if ((argv[i][z] != '+' || argv[i][z] != '-') && (!ft_isdigit(argv[i][z + 1])))
+			if ((argv[i][z] != '+' || argv[i][z] != '-') && \
+			(!ft_isdigit(argv[i][z + 1])))
 			{
 				if (!ft_isdigit(argv[i][z]))
 					errorminator(ERR_INT);
 			}
 			z++;
 		}
-		d->a->v[d->a->i] = ft_atoi(argv[i]);
-		i++;
-		d->a->i++;
+		d->a->v[d->a->i++] = ft_atoi(argv[i++]);
 	}
 }
 
@@ -124,7 +115,6 @@ void	nbr_to_index(t_data *d)
 	i = 0;
 	j = 0;
 	nbr = d->a->nbr;
-	//d->a->idx = ft_calloc(nbr, sizeof(long *));
 	the_sorter(d);
 	while (i < d->a->nbr)
 	{

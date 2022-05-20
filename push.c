@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 15:35:19 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:25:59 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:03:58 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	pa(t_data *d)
 	{
 		while (d->a->i > 0)
 		{
-			d->a->idx[d->a->i] = d->a->idx[d->a->i - 1];	
+			d->a->idx[d->a->i] = d->a->idx[d->a->i - 1];
 			d->a->v[d->a->i] = d->a->v[d->a->i - 1];
 			d->a->i--;
 		}
@@ -29,7 +29,7 @@ void	pa(t_data *d)
 		d->a->nbr++;
 		while (d->b->i < d->b->nbr - 1)
 		{
-			d->b->idx[d->b->i] = d->b->idx[d->b->i + 1];	
+			d->b->idx[d->b->i] = d->b->idx[d->b->i + 1];
 			d->b->v[d->b->i] = d->b->v[d->b->i + 1];
 			d->b->i++;
 		}
@@ -56,7 +56,7 @@ void	pb(t_data *d)
 		while (d->a->i < d->a->nbr - 1)
 		{
 			d->a->idx[d->a->i] = d->a->idx[d->a->i + 1];
-			d->a->v[d->a->i] = d->a->v[d->a->i + 1];	
+			d->a->v[d->a->i] = d->a->v[d->a->i + 1];
 			d->a->i++;
 		}
 		d->a->nbr--;

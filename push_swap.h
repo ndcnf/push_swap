@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 10:25:07 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:07:18 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ typedef struct s_data
 	t_stack	*b;
 	int		arg;
 	long	*ord;
-	//long	*idx;
 }	t_data;
 
 //error.c
@@ -60,6 +59,7 @@ void	already_sorted(t_data *d);
 
 //init.c
 void	the_allocator(t_data *d);
+void	count_on_me(t_data *d);
 void	init_stacks(t_data *d);
 void	pop_stack_a(t_data *d, int argc, char *argv[]);
 
@@ -96,8 +96,5 @@ void	rr(t_data *d);
 void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
-
-void	check_moi_ca_stp(t_data *d);
-//SUPPRIMER QUAND PLUS BESOIN DE VERIFIER LES OPERATIONS
 
 #endif
