@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 16:07:18 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:34:01 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,12 @@ void	rr(t_data *d);
 void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
+
+//a_few_int.c
+void	how_many(t_data *d);
+void	only_two(t_data *d);
+void	only_three(t_data *d);
+void	only_four(t_data *d);
+void	only_five(t_data *d);
 
 #endif

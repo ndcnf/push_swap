@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 16:04:43 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 18:05:30 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ int	main(int argc, char *argv[])
 	nbr_to_index(&d);
 	no_doppelganger(&d);
 	already_sorted(&d);
-	radix(&d);
+	how_many(&d);
 	return (EXIT_SUCCESS);
 }
