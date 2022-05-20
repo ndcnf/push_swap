@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:25:52 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:11:04 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 09:15:31 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,31 +29,24 @@ void	ra(t_data *d)
 	d->a->idx[d->a->nbr - 1] = tempura_i;
 	d->a->v[d->a->nbr - 1] = tempura_v;
 	ft_printf("ra\n");
-
-/* 	d->a->i = 0;
-	tempura = d->a->v[0];
-	while (d->a->i < d->a->nbr)
-	{
-		d->a->v[d->a->i] = d->a->v[d->a->i + 1];
-		d->a->i++;
-	}
-	d->a->v[d->a->nbr - 1] = tempura;
-	ft_printf("ra\n"); */
-	//check_moi_ca_stp(d);
 }
 
 void	rb(t_data *d)
 {
-	int	tempura;
+	int	tempura_v;
+	int	tempura_i;
 
 	d->b->i = 0;
-	tempura = d->b->v[0];
-	while (d->b->i < d->b->nbr)
+	tempura_v = d->b->v[0];
+	tempura_i = d->b->idx[0];
+	while (d->b->i < d->b->nbr - 1)
 	{
+		d->b->idx[d->b->i] = d->b->idx[d->b->i + 1];
 		d->b->v[d->b->i] = d->b->v[d->b->i + 1];
 		d->b->i++;
 	}
-	d->b->v[d->b->nbr - 1] = tempura;
+	d->b->v[d->b->nbr - 1] = tempura_v;
+	d->b->idx[d->b->nbr - 1] = tempura_i;
 	ft_printf("rb\n");
 	//check_moi_ca_stp(d);
 }
