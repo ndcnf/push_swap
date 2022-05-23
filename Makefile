@@ -1,4 +1,4 @@
-CC =		CC
+CC =		cc
 CFLAGS =	-Wall -Wextra -Werror -g -fsanitize=address
 NAME =		push_swap
 AR =		ar rcs

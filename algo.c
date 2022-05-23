@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 14:00:20 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 16:06:40 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/23 20:35:12 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,4 @@ void	radix(t_data *d)
 		}
 		i++;
 	}
-}
-
-void	the_bitshifter(t_data *d)
-{
-	int	i;
-	int	bitshifted;
-
-	i = 0;
-	bitshifted = d->a->idx[i];
-	radix(d);
 }

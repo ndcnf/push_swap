@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 16:03:29 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/23 20:33:25 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,9 @@ void	one_string(t_data *d, char *argv[])
 void	every_arg_counts(t_data *d, int argc, char *argv[])
 {
 	int		i;
-	int		j;
 	size_t	z;
 
 	i = 1;
-	j = 0;
 	d->a->nbr = argc - 1;
 	count_on_me(d);
 	while (i <= d->a->nbr)
@@ -108,13 +106,11 @@ void	the_sorter(t_data *d)
 
 void	nbr_to_index(t_data *d)
 {
-	int	nbr;
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	nbr = d->a->nbr;
 	the_sorter(d);
 	while (i < d->a->nbr)
 	{

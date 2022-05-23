@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 16:34:01 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/23 20:35:54 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ long	ft_atol(const char *str);
 //algo.c
 int		get_max(t_data *d);
 void	radix(t_data *d);
-void	the_bitshifter(t_data *d);
 
 //swap.c
 void	sa(t_data *d);
