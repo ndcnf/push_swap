@@ -44,4 +44,7 @@ fclean:		clean
 
 re:			fclean all
 
+test:		all
+			cp push_swap ../push_swap_tester/.
+
 .PHONY:		all clean fclean

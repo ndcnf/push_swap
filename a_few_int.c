@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 16:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 18:44:40 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:17:20 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,33 @@ void	only_two(t_data *d)
 {
 	sa(d);
 }
+
+// void	only_three(t_data *d)
+// {
+// 	int	f;
+// 	int	s;
+// 	int	t;
+
+// 	f = d->a->idx[0];
+// 	s = d->a->idx[1];
+// 	t = d->a->idx[2];
+// 	if (f > s && f < t && s < t)
+// 		sa(d);
+// 	else if (f > s && s > t && t < f)
+// 	{
+// 		sa(d);
+// 		rra(d);
+// 	}
+// 	else if (s < t && s < f && f > t)
+// 		ra(d);
+// 	else if (f < s && f < t && s > t)
+// 	{
+// 		sa(d);
+// 		ra(d);
+// 	}
+// 	else if (f < s && s > t && t < f)
+// 		rra(d);
+// }
 
 void	only_three(t_data *d)
 {
@@ -58,29 +85,55 @@ void	only_three(t_data *d)
 		rra(d);
 }
 
+
 void	only_four(t_data *d)
 {
-	int	max;
-
-	max = d->a->nbr - 1;
-	while (max)
+	while (d->b->nbr < 1)
 	{
-		if (d->a->idx[max] == 3)
-			break;
-		max--;
+		while (d->a->idx[0] != 3)
+			ra(d);
+		pb(d);
 	}
-	while (max > 0)
-	{
-		ra(d);
-		max--;
-	}
-	pb(d);
 	only_three(d);
 	pa(d);
 	ra(d);
 }
 
+// void	only_four(t_data *d)
+// {
+// 	int	max;
+
+// 	max = d->a->nbr - 1;
+// 	while (max)
+// 	{
+// 		if (d->a->idx[max] == 3)
+// 			break;
+// 		max--;
+// 	}
+// 	while (max > 0)
+// 	{
+// 		ra(d);
+// 		max--;
+// 	}
+// 	pb(d);
+// 	only_three(d);
+// 	pa(d);
+// 	ra(d);
+// }
+
 void	only_five(t_data *d)
 {
-	ft_printf("5 ! %d\n", d->a->nbr);
+	while (d->b->nbr < 2)
+	{
+		while (d->a->idx[0] < 3)
+			ra(d);
+		pb(d);
+	}
+	if (d->b->idx[0] < d->b->idx[1])
+		sb(d);
+	only_three(d);
+	pa(d);
+	pa(d);
+	ra(d);
+	ra(d);
 }
