@@ -6,7 +6,11 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:39:55 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/23 20:33:25 by nchennaf         ###   ########.fr       */
+<<<<<<< HEAD
+/*   Updated: 2022/05/20 14:58:12 by nchennaf         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/20 08:38:13 by nchennaf         ###   ########.fr       */
+>>>>>>> parent of f03e17c (integers mngt fixed)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +23,8 @@ void	one_string(t_data *d, char *argv[])
 
 	i = 0;
 	d->a->i = 0;
-	lenny = ft_strlen(argv[1]);
-	while (i <= lenny)
+	lenny = d->a->nbr;
+	/*while (i <= lenny)
 	{
 		if (argv[1][i] == ' ')
 			d->a->nbr++;
@@ -28,7 +32,11 @@ void	one_string(t_data *d, char *argv[])
 	}
 	d->a->nbr++;
 	lenny = d->a->nbr;
-	count_on_me(d);
+	d->a->v = ft_calloc(lenny, sizeof(long *));
+	d->b->v = ft_calloc(lenny, sizeof(long *));
+	d->a->idx = ft_calloc(lenny, sizeof(long *));
+	d->b->idx = ft_calloc(lenny, sizeof(long *)); */
+
 	while (d->a->i < lenny)
 	{
 		if (ft_atol(ft_split(argv[1], ' ')[d->a->i]) < MIN_INT || \
@@ -39,30 +47,27 @@ void	one_string(t_data *d, char *argv[])
 	}
 }
 
-void	every_arg_counts(t_data *d, int argc, char *argv[])
+void	every_arg_counts(t_data *d, char *argv[])
 {
-	int		i;
-	size_t	z;
+	int	i;
+	int	j;
 
 	i = 1;
-	d->a->nbr = argc - 1;
-	count_on_me(d);
+	j = 0;
+/* 	d->a->nbr = argc - 1;
+	d->arg = 0;
+	d->a->i = 0;
+	d->a->v = ft_calloc(d->a->nbr, sizeof(long *));
+	d->b->v = ft_calloc(d->a->nbr, sizeof(long *));
+	d->a->idx = ft_calloc(d->a->nbr, sizeof(long *));
+	d->b->idx = ft_calloc(d->a->nbr, sizeof(long *)); */
 	while (i <= d->a->nbr)
 	{
 		if (ft_atol(argv[i]) < MIN_INT || ft_atol(argv[i]) > MAX_INT)
 			errorminator(ERR_SZE);
-		z = 0;
-		while (z < ft_strlen(argv[i]))
-		{
-			if ((argv[i][z] != '+' || argv[i][z] != '-') && \
-			(!ft_isdigit(argv[i][z + 1])))
-			{
-				if (!ft_isdigit(argv[i][z]))
-					errorminator(ERR_INT);
-			}
-			z++;
-		}
-		d->a->v[d->a->i++] = ft_atoi(argv[i++]);
+		d->a->v[d->a->i] = ft_atoi(argv[i]);
+		i++;
+		d->a->i++;
 	}
 }
 
@@ -106,11 +111,13 @@ void	the_sorter(t_data *d)
 
 void	nbr_to_index(t_data *d)
 {
+	int	nbr;
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
+	nbr = d->a->nbr;
 	the_sorter(d);
 	while (i < d->a->nbr)
 	{

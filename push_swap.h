@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:36 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/23 20:35:54 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:59:26 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_data
 	t_stack	*b;
 	int		arg;
 	long	*ord;
+	//long	*idx;
 }	t_data;
 
 //error.c
@@ -59,13 +60,13 @@ void	already_sorted(t_data *d);
 
 //init.c
 void	the_allocator(t_data *d);
-void	count_on_me(t_data *d);
+void	count_on_me(t_data *d, int argc, char *argv[]);
 void	init_stacks(t_data *d);
-void	pop_stack_a(t_data *d, int argc, char *argv[]);
+void	pop_stack_a(t_data *d, char *argv[]);
 
 //inputs.c
 void	one_string(t_data *d, char *argv[]);
-void	every_arg_counts(t_data *d, int argc, char *argv[]);
+void	every_arg_counts(t_data *d, char *argv[]);
 void	the_swapper(t_data *d, int i, int j);
 void	the_sorter(t_data *d);
 void	nbr_to_index(t_data *d);
@@ -76,6 +77,7 @@ long	ft_atol(const char *str);
 //algo.c
 int		get_max(t_data *d);
 void	radix(t_data *d);
+void	the_bitshifter(t_data *d);
 
 //swap.c
 void	sa(t_data *d);
@@ -96,11 +98,7 @@ void	rra(t_data *d);
 void	rrb(t_data *d);
 void	rrr(t_data *d);
 
-//a_few_int.c
-void	how_many(t_data *d);
-void	only_two(t_data *d);
-void	only_three(t_data *d);
-void	only_four(t_data *d);
-void	only_five(t_data *d);
+void	check_moi_ca_stp(t_data *d);
+//SUPPRIMER QUAND PLUS BESOIN DE VERIFIER LES OPERATIONS
 
 #endif
