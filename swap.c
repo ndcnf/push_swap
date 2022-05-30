@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:12:35 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 09:35:14 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:10:41 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sa(t_data *d)
 		d->a->idx[0] = d->a->idx[1];
 		d->a->v[1] = tempura_v;
 		d->a->idx[1] = tempura_i;
-		printf("sa\n");
+		ft_printf("sa\n");
 	}
 }
 
@@ -42,7 +42,7 @@ void	sb(t_data *d)
 		d->b->idx[0] = d->b->idx[1];
 		d->b->v[1] = tempura_v;
 		d->b->idx[1] = tempura_i;
-		printf("sb\n");
+		ft_printf("sb\n");
 	}
 }
 

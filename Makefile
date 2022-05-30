@@ -1,5 +1,5 @@
-CC =		CC
-CFLAGS =	-Wall -Wextra -Werror -g -fsanitize=address
+CC =		cc
+CFLAGS =	-Wall -Wextra -Werror #-g -fsanitize=address
 NAME =		push_swap
 AR =		ar rcs
 SRC =		push_swap.c \
@@ -10,7 +10,8 @@ SRC =		push_swap.c \
 			push.c \
 			rotate.c \
 			reverse_rotate.c \
-			algo.c
+			algo.c \
+			a_few_int.c
 
 DIR_LIBFT =	./libft/
 LIB_LIBFT =	ft
@@ -42,5 +43,8 @@ fclean:		clean
 			rm -rf ${NAME}
 
 re:			fclean all
+
+test:		all
+			cp push_swap ../push_swap_tester/.
 
 .PHONY:		all clean fclean
