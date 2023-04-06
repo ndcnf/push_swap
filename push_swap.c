@@ -6,30 +6,11 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:08:24 by nchennaf          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/05/20 14:59:43 by nchennaf         ###   ########.fr       */
-=======
-/*   Updated: 2022/05/20 10:24:49 by nchennaf         ###   ########.fr       */
->>>>>>> parent of f03e17c (integers mngt fixed)
+/*   Updated: 2022/05/24 17:11:03 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	check_moi_ca_stp(t_data *d)
-{
-	d->a->i = 0;
-
-	ft_printf("\n|-----[STACK A]-----|\n");
-	while (d->a->i < d->a->nbr)
-		ft_printf("[%d] v{%d} idx{%d}\n", d->a->i, d->a->v[d->a->i], d->a->idx[d->a->i++]);
-	
-	d->b->i = 0;
-
-	ft_printf("\n|-----[STACK B]-----|\n");
-	while (d->b->i < d->b->nbr)
-		ft_printf("[%d] v{%d} idx{%d}\n", d->b->i, d->b->v[d->b->i], d->b->idx[d->b->i++]);
-}
 
 long	ft_atol(const char *str)
 {
@@ -66,11 +47,10 @@ int	main(int argc, char *argv[])
 	init_stacks(&d);
 	if (argc < 2)
 		return (EXIT_SUCCESS);
-	count_on_me(&d, argc, argv);
-	pop_stack_a(&d, argv);
+	pop_stack_a(&d, argc, argv);
 	nbr_to_index(&d);
 	no_doppelganger(&d);
 	already_sorted(&d);
-	the_bitshifter(&d);
+	how_many(&d);
 	return (EXIT_SUCCESS);
 }

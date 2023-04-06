@@ -6,7 +6,7 @@
 /*   By: nchennaf <nchennaf@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:18 by nchennaf          #+#    #+#             */
-/*   Updated: 2022/05/20 15:27:52 by nchennaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:06:52 by nchennaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	errorminator(char *s)
 void	only_int(t_data *d, char *argv[])
 {
 	int	i;
+	int	j;
 
 	i = 0;
 	j = 1;
@@ -31,6 +32,8 @@ void	only_int(t_data *d, char *argv[])
 		{
 			if (argv[j][i] != ' ' && argv[j][i] != '-' && argv[j][i] != '+')
 				errorminator(ERR_INT);
+			if (d->arg == 0)
+				j++;
 		}
 		i++;
 	}
